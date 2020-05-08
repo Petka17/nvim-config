@@ -1,0 +1,13 @@
+{
+  "eslint.autoFixOnSave": true,
+
+  "explorer.width": 40,
+  "explorer.previewAction.onHover": false,
+  "explorer.presets": {
+    "floating": {
+      "position": "floating",
+      "floating-width": 60,
+      "floating-position": "center"
+    }
+  }
+}
