@@ -16,9 +16,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'vim-airline/vim-airline-themes'
 
   " Better Syntax Support
-  Plug 'sheerun/vim-polyglot'
+  "Plug 'sheerun/vim-polyglot'
+  Plug 'pangloss/vim-javascript'
+  Plug 'mxw/vim-jsx'
   Plug 'leafgarland/typescript-vim'
   Plug 'peitalin/vim-jsx-typescript'
+  Plug 'stephpy/vim-yaml'
 
   " CoC
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -28,11 +31,20 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   " Surround
   Plug 'tpope/vim-surround' 
+
+  " Comments
+  Plug 'tpope/vim-commentary'
   
   " FZF
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'airblade/vim-rooter'
+
+  " Git
+  Plug 'mhinz/vim-signify'
+  Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-rhubarb'
+  Plug 'junegunn/gv.vim'
 
   " Start
   Plug 'mhinz/vim-startify'

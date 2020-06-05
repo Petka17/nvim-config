@@ -24,3 +24,12 @@ nmap <leader>r <Plug>(coc-rename)
 " Explorer
 nnoremap <leader>e :CocCommand explorer<CR>
 nnoremap <leader>E :CocCommand explorer --preset floating<CR>
+
+
+function! CocRestart()
+  echo "Restarting COC"
+  syntax off
+  CocRestart
+  syntax on
+endfunction
+nmap <leader><f5> :call CocRestart()<CR>

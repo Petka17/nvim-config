@@ -32,9 +32,6 @@ nnoremap <silent> ]B :blast<CR>
 noremap <Leader>n nzz
 noremap <Leader>N Nzz
 
-noremap <C-u> <C-u>M
-noremap <C-d> <C-d>M
-
 " Window split
 nnoremap <leader>\ :vsplit<CR>
 nnoremap <leader>- :split<CR>
@@ -72,5 +69,13 @@ nnoremap <leader>/ :let @/=""<CR>
 map <leader>, :vsplit ~/.config/nvim/init.vim<CR>
 
 " Save
-nnoremap <C-s> :w<CR>
-inoremap <C-s> <Esc>:w<CR>
+nnoremap <C-s> :write<CR>
+nnoremap <leader>w :write<CR>
+inoremap <C-s> <Esc>:write<CR>
+
+" Newline
+nnoremap o o<Esc>
+nnoremap O O<Esc>
+
+" Select
+nnoremap * *N

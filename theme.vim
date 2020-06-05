@@ -2,25 +2,9 @@ set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
-" checks if your terminal has 24-bit color support
-if (has("termguicolors"))
-    set termguicolors
-    hi LineNr ctermbg=NONE guibg=NONE
-endif
-
-" onedark.vim override: Don't set a background color when running in a terminal;
-if (has("autocmd") && !has("gui_running"))
-  augroup colorset
-    autocmd!
-    let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
-    
-    " `bg` will not be styled since there is no `bg` setting
-    autocmd ColorScheme * call onedark#set_highlight("Normal", { "fg": s:white }) 
-  augroup END
-endif
+hi LineNr ctermbg=NONE guibg=NONE
 
 colorscheme onedark
-
 
 " Airline
 

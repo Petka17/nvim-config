@@ -1,33 +1,27 @@
-" This is the default extra key bindings
-let g:fzf_action = {
-  \ 'K': 'tab split',
-  \ 'J': 'split',
-  \ 'C-l': 'vsplit' }
-
-" Enable per-command history.
-" CTRL-N and CTRL-P will be automatically bound to next-history and
-" previous-history instead of down and up. If you don't like the change,
-" explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
-let g:fzf_history_dir = '~/.local/share/fzf-history'
-
 nnoremap <leader>f :GFiles<CR>
 nnoremap <leader><leader>f :GFiles?<CR>
 nnoremap <leader>F :Files<CR>
+nnoremap <leader>h :History<CR>
 nnoremap <leader>b :Buffers<CR>
-nnoremap <leader>w :Rg<CR>
+nnoremap <leader>t :RG<CR>
 nnoremap <leader>m :Marks<CR>
 
-let g:fzf_tags_command = 'ctags -R'
+" This is the default extra key bindings
+let g:fzf_action = {
+  \ 'ctrl-k': 'tab split',
+  \ 'ctrl-j': 'split',
+  \ 'ctrl-l': 'vsplit' }
+  
+let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 " Border color
 let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.8, 'height': 0.8,'yoffset':0.5,'xoffset': 0.5, 'highlight': 'Todo', 'border': 'sharp' } }
-
-let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'
+let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline --bind ctrl-y:next-history,ctrl-u:previous-history,ctrl-n:down,ctrl-p:up'
 let $FZF_DEFAULT_COMMAND="rg --files --hidden"
 
 " Customize fzf colors to match your color scheme
-let g:fzf_colors =
-\ { 'fg':      ['fg', 'Normal'],
+let g:fzf_colors = {
+  \ 'fg':      ['fg', 'Normal'],
   \ 'bg':      ['bg', 'Normal'],
   \ 'hl':      ['fg', 'Comment'],
   \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
@@ -58,6 +52,7 @@ function! RipgrepFzf(query, fullscreen)
   let initial_command = printf(command_fmt, shellescape(a:query))
   let reload_command = printf(command_fmt, '{q}')
   let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
+  
   call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
 endfunction
 
