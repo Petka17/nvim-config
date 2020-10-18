@@ -63,3 +63,7 @@ set foldcolumn=2                " Folding abilities
 set formatoptions-=cro          " Stop newline continution of comments
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+set foldmethod=syntax
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2

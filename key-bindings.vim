@@ -14,10 +14,6 @@ inoremap <Right> <Nop>
 inoremap <Up> <Nop>
 inoremap <Down> <Nop>
 
-" No more backspace
-noremap <BS> <Nop>
-inoremap <BS> <Nop>
-
 " <Tab> for switching tabs
 nmap <Tab> :tabNext<CR>
 nmap <S-Tab> :tabprevious<CR>
@@ -27,10 +23,6 @@ nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR> 
 nnoremap <silent> [B :bfirst<CR> 
 nnoremap <silent> ]B :blast<CR>
-
-" Next search
-noremap <Leader>n nzz
-noremap <Leader>N Nzz
 
 " Window split
 nnoremap <leader>\ :vsplit<CR>
@@ -72,10 +64,3 @@ map <leader>, :vsplit ~/.config/nvim/init.vim<CR>
 nnoremap <C-s> :write<CR>
 nnoremap <leader>w :write<CR>
 inoremap <C-s> <Esc>:write<CR>
-
-" Newline
-nnoremap o o<Esc>
-nnoremap O O<Esc>
-
-" Select
-nnoremap * *N

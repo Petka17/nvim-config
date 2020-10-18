@@ -22,6 +22,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'leafgarland/typescript-vim'
   Plug 'peitalin/vim-jsx-typescript'
   Plug 'stephpy/vim-yaml'
+  Plug 'andys8/vim-elm-syntax'
 
   " CoC
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -34,6 +35,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   " Comments
   Plug 'tpope/vim-commentary'
+
+  " Some key bindings
+  Plug 'tpope/vim-unimpaired'
+
+  " Navigation
+  Plug 'unblevable/quick-scope'
+  Plug 'justinmk/vim-sneak'
   
   " FZF
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }

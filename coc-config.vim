@@ -21,9 +21,15 @@ nmap <silent> gy <Plug>(coc-type-definition)
 " Symbol renaming.
 nmap <leader>r <Plug>(coc-rename)
 
+" Remap for do codeAction of current line
+nmap <leader>a <Plug>(coc-codeaction)
+
+" Fix autofix problem of current line
+nmap <leader>q  <Plug>(coc-fix-current)
+
 " Explorer
-nnoremap <leader>e :CocCommand explorer<CR>
-nnoremap <leader>E :CocCommand explorer --preset floating<CR>
+nnoremap <leader>E :CocCommand explorer<CR>
+nnoremap <leader>e :CocCommand explorer --preset floating<CR>
 
 
 function! CocRestart()
