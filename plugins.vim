@@ -23,6 +23,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'peitalin/vim-jsx-typescript'
   Plug 'stephpy/vim-yaml'
   Plug 'andys8/vim-elm-syntax'
+  Plug 'jparise/vim-graphql'
+  Plug 'digitaltoad/vim-pug'
 
   " CoC
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
